@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  HSSDKSwiftUISample
+//  HSSDKXSwiftUISample
 //
 //  Created by Sagar Dagdu on 28/05/21.
 //

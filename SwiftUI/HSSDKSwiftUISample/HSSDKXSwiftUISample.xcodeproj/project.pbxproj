@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18A968B8B8D3BFD84D95C27B /* Pods_HSSDKSwiftUISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D9E0B899B284A64A5266E5 /* Pods_HSSDKSwiftUISample.framework */; };
+		67A3068F8F1DD87010DEA869 /* Pods_HSSDKXSwiftUISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA192E5C2C38DCFBBB30DE4 /* Pods_HSSDKXSwiftUISample.framework */; };
 		AC2C83EE2664C16C0003F56A /* ChangeLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C83ED2664C16C0003F56A /* ChangeLanguageView.swift */; };
 		ACD99DF5266115400029834C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99DF4266115400029834C /* AppDelegate.swift */; };
 		ACD99DF7266115400029834C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD99DF6266115400029834C /* SceneDelegate.swift */; };
@@ -22,10 +22,12 @@
 
 /* Begin PBXFileReference section */
 		230AFC76C3E23CFD30748880 /* Pods-HSSDKSwiftUISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSSDKSwiftUISample.debug.xcconfig"; path = "Target Support Files/Pods-HSSDKSwiftUISample/Pods-HSSDKSwiftUISample.debug.xcconfig"; sourceTree = "<group>"; };
+		45FAE7AAD72BE74CEF6F854A /* Pods-HSSDKXSwiftUISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSSDKXSwiftUISample.debug.xcconfig"; path = "Target Support Files/Pods-HSSDKXSwiftUISample/Pods-HSSDKXSwiftUISample.debug.xcconfig"; sourceTree = "<group>"; };
 		4A0E47C5CDBB32EF48257FA1 /* Pods-HSSDKSwiftUISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSSDKSwiftUISample.release.xcconfig"; path = "Target Support Files/Pods-HSSDKSwiftUISample/Pods-HSSDKSwiftUISample.release.xcconfig"; sourceTree = "<group>"; };
+		7BA192E5C2C38DCFBBB30DE4 /* Pods_HSSDKXSwiftUISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSSDKXSwiftUISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2C83ED2664C16C0003F56A /* ChangeLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageView.swift; sourceTree = "<group>"; };
 		ACD706F72664EEB400477C54 /* HSSDKSwiftUISample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HSSDKSwiftUISample.entitlements; sourceTree = "<group>"; };
-		ACD99DF1266115400029834C /* HSSDKSwiftUISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSSDKSwiftUISample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACD99DF1266115400029834C /* HSSDKXSwiftUISample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSSDKXSwiftUISample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD99DF4266115400029834C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACD99DF6266115400029834C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ACD99DF8266115400029834C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,7 +38,7 @@
 		ACD99E102661160D0029834C /* HelpshiftEventsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpshiftEventsHandler.swift; sourceTree = "<group>"; };
 		ACD99E16266117640029834C /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
 		ACD99E1B266120BA0029834C /* DemoActionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoActionRow.swift; sourceTree = "<group>"; };
-		D4D9E0B899B284A64A5266E5 /* Pods_HSSDKSwiftUISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSSDKSwiftUISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF936A7462D23296B2830323 /* Pods-HSSDKXSwiftUISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSSDKXSwiftUISample.release.xcconfig"; path = "Target Support Files/Pods-HSSDKXSwiftUISample/Pods-HSSDKXSwiftUISample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A968B8B8D3BFD84D95C27B /* Pods_HSSDKSwiftUISample.framework in Frameworks */,
+				67A3068F8F1DD87010DEA869 /* Pods_HSSDKXSwiftUISample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +58,8 @@
 			children = (
 				230AFC76C3E23CFD30748880 /* Pods-HSSDKSwiftUISample.debug.xcconfig */,
 				4A0E47C5CDBB32EF48257FA1 /* Pods-HSSDKSwiftUISample.release.xcconfig */,
+				45FAE7AAD72BE74CEF6F854A /* Pods-HSSDKXSwiftUISample.debug.xcconfig */,
+				CF936A7462D23296B2830323 /* Pods-HSSDKXSwiftUISample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -63,7 +67,7 @@
 		ACD99DE8266115400029834C = {
 			isa = PBXGroup;
 			children = (
-				ACD99DF3266115400029834C /* HSSDKSwiftUISample */,
+				ACD99DF3266115400029834C /* HSSDKXSwiftUISample */,
 				ACD99DF2266115400029834C /* Products */,
 				27F65AF3226918E40C0AD3EC /* Pods */,
 				F06CC12E1BF04C6CEBE77D1F /* Frameworks */,
@@ -73,12 +77,12 @@
 		ACD99DF2266115400029834C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ACD99DF1266115400029834C /* HSSDKSwiftUISample.app */,
+				ACD99DF1266115400029834C /* HSSDKXSwiftUISample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ACD99DF3266115400029834C /* HSSDKSwiftUISample */ = {
+		ACD99DF3266115400029834C /* HSSDKXSwiftUISample */ = {
 			isa = PBXGroup;
 			children = (
 				ACD706F72664EEB400477C54 /* HSSDKSwiftUISample.entitlements */,
@@ -94,7 +98,7 @@
 				ACD99E1B266120BA0029834C /* DemoActionRow.swift */,
 				AC2C83ED2664C16C0003F56A /* ChangeLanguageView.swift */,
 			);
-			path = HSSDKSwiftUISample;
+			path = HSSDKXSwiftUISample;
 			sourceTree = "<group>";
 		};
 		ACD99DFC266115410029834C /* Preview Content */ = {
@@ -108,7 +112,7 @@
 		F06CC12E1BF04C6CEBE77D1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D4D9E0B899B284A64A5266E5 /* Pods_HSSDKSwiftUISample.framework */,
+				7BA192E5C2C38DCFBBB30DE4 /* Pods_HSSDKXSwiftUISample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ACD99DF0266115400029834C /* HSSDKSwiftUISample */ = {
+		ACD99DF0266115400029834C /* HSSDKXSwiftUISample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ACD99E05266115410029834C /* Build configuration list for PBXNativeTarget "HSSDKSwiftUISample" */;
+			buildConfigurationList = ACD99E05266115410029834C /* Build configuration list for PBXNativeTarget "HSSDKXSwiftUISample" */;
 			buildPhases = (
 				022FA941A0A73C301D3DEDCF /* [CP] Check Pods Manifest.lock */,
 				ACD99DED266115400029834C /* Sources */,
@@ -130,9 +134,9 @@
 			);
 			dependencies = (
 			);
-			name = HSSDKSwiftUISample;
+			name = HSSDKXSwiftUISample;
 			productName = HSSDKSwiftUISample;
-			productReference = ACD99DF1266115400029834C /* HSSDKSwiftUISample.app */;
+			productReference = ACD99DF1266115400029834C /* HSSDKXSwiftUISample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,7 +153,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ACD99DEC266115400029834C /* Build configuration list for PBXProject "HSSDKSwiftUISample" */;
+			buildConfigurationList = ACD99DEC266115400029834C /* Build configuration list for PBXProject "HSSDKXSwiftUISample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -162,7 +166,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ACD99DF0266115400029834C /* HSSDKSwiftUISample */,
+				ACD99DF0266115400029834C /* HSSDKXSwiftUISample */,
 			);
 		};
 /* End PBXProject section */
@@ -196,7 +200,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HSSDKSwiftUISample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-HSSDKXSwiftUISample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -209,15 +213,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HSSDKSwiftUISample/Pods-HSSDKSwiftUISample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-HSSDKXSwiftUISample/Pods-HSSDKXSwiftUISample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HSSDKSwiftUISample/Pods-HSSDKSwiftUISample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-HSSDKXSwiftUISample/Pods-HSSDKXSwiftUISample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HSSDKSwiftUISample/Pods-HSSDKSwiftUISample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HSSDKXSwiftUISample/Pods-HSSDKXSwiftUISample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -369,16 +373,16 @@
 		};
 		ACD99E06266115410029834C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 230AFC76C3E23CFD30748880 /* Pods-HSSDKSwiftUISample.debug.xcconfig */;
+			baseConfigurationReference = 45FAE7AAD72BE74CEF6F854A /* Pods-HSSDKXSwiftUISample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HSSDKSwiftUISample/HSSDKSwiftUISample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HSSDKXSwiftUISample/HSSDKSwiftUISample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"HSSDKSwiftUISample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HSSDKXSwiftUISample/Preview Content\"";
 				DEVELOPMENT_TEAM = 75WN78RS4G;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = HSSDKSwiftUISample/Info.plist;
+				INFOPLIST_FILE = HSSDKXSwiftUISample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,16 +397,16 @@
 		};
 		ACD99E07266115410029834C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A0E47C5CDBB32EF48257FA1 /* Pods-HSSDKSwiftUISample.release.xcconfig */;
+			baseConfigurationReference = CF936A7462D23296B2830323 /* Pods-HSSDKXSwiftUISample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HSSDKSwiftUISample/HSSDKSwiftUISample.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HSSDKXSwiftUISample/HSSDKSwiftUISample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"HSSDKSwiftUISample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HSSDKXSwiftUISample/Preview Content\"";
 				DEVELOPMENT_TEAM = 75WN78RS4G;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = HSSDKSwiftUISample/Info.plist;
+				INFOPLIST_FILE = HSSDKXSwiftUISample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,7 +422,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ACD99DEC266115400029834C /* Build configuration list for PBXProject "HSSDKSwiftUISample" */ = {
+		ACD99DEC266115400029834C /* Build configuration list for PBXProject "HSSDKXSwiftUISample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ACD99E03266115410029834C /* Debug */,
@@ -427,7 +431,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ACD99E05266115410029834C /* Build configuration list for PBXNativeTarget "HSSDKSwiftUISample" */ = {
+		ACD99E05266115410029834C /* Build configuration list for PBXNativeTarget "HSSDKXSwiftUISample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ACD99E06266115410029834C /* Debug */,

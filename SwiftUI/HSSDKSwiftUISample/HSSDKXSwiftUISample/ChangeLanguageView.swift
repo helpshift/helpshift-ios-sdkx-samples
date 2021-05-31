@@ -1,6 +1,6 @@
 //
 //  ChangeLanguageView.swift
-//  HSSDKSwiftUISample
+//  HSSDKXSwiftUISample
 //
 //  Created by Sagar Dagdu on 31/05/21.
 //

@@ -1,6 +1,6 @@
 //
 //  HelpshiftEventsHandler.swift
-//  HSSDKXSwiftSample
+//  HSSDKXSwiftUISample
 //
 //  Created by Sagar Dagdu on 28/05/21.
 //  Copyright © 2021 Sagar Dagdu. All rights reserved.
