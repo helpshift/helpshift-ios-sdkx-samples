@@ -4,7 +4,7 @@ Sample Xcode projects demonstrating the integration of HelpshiftX SDK
 
 ## Requirements
 
-* see Helpshift SDK requirements [here](https://developers.helpshift.com/sdkx_ios/getting-started/)
+* see HelpshiftX SDK requirements [here](https://developers.helpshift.com/sdkx_ios/getting-started/)
 
 ## Projects
 
@@ -12,7 +12,7 @@ Each one of the sub-directories in this repository is a Xcode project that demon
 
 * **[Objc/HSSDKXObjcSample](ObjC/HSSDKXObjcSample)**: Demonstrates integration of HelpshiftX your Objective-C app
 * **[Swift/HSSDKXSwiftSample](Swift/HSSDKXSwiftSample)**: Demonstrates integration of HelpshiftX your Swift app
-* **[SwiftUI/HSSDKXSwiftUISample](SwiftUI/HSSDKXSwiftUISample)**: Demonstrates integration of HelpshiftX your app which has its UI done using SwiftUI framework
+* **[SwiftUI/HSSDKXSwiftUISample](SwiftUI/HSSDKXSwiftUISample)**: Demonstrates integration of HelpshiftX your app which has its UI done using `SwiftUI` framework
 
 For the projects to build and run successfully, please follow these steps : 
 * Enter your install credentials in `AppDelegate.m` (`AppDelegate.swift` for Swift projects) Check the `#warning` occurences in the app to know what values have to replaced.
