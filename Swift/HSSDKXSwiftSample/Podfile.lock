@@ -1,0 +1,16 @@
+PODS:
+  - HelpshiftX (10.0.0)
+
+DEPENDENCIES:
+  - HelpshiftX
+
+SPEC REPOS:
+  trunk:
+    - HelpshiftX
+
+SPEC CHECKSUMS:
+  HelpshiftX: b232b6f56030b5bd2e14adb89060cfd893d03384
+
+PODFILE CHECKSUM: 01e1b9cd5173b5b7fd16c4448ed483f0ba71bac1
+
+COCOAPODS: 1.10.1
