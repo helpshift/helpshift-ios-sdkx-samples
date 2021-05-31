@@ -2,7 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:HSSDKSwiftUISample.xcodeproj">
       location = "group:HSSDKXSwiftUISample.xcodeproj">
    </FileRef>
    <FileRef
