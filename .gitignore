@@ -1,0 +1,44 @@
+.DS_Store*
+HelpShift.iml
+HelpShift.ipr
+HelpShift.iws
+bin/
+gen/
+out/
+*.h.uncrustify
+*.m.uncrustify
+build/
+TAGS
+xcuserdata/
+.irb-history
+.irbrc
+*.psd
+*.a
+*~
+*#
+
+# PhoneGap Specific #
+#####################
+project.xcworkspace/
+CordovaLib/
+cordova.ios.js
+
+# Code Coverage #
+Tests/XcodeCoverage/env.sh
+*.gcda
+*.gcno
+
+target/
+Packaging/
+
+# Appcode specific
+.idea/
+
+Pods/
+
+# Ignore SonarQube Dump
+sonar_source.txt
+.scannerwork/
+compile_commands.json
+sonar-reports/
+xcodebuild.log
