@@ -170,7 +170,17 @@ struct ContentView: View {
     private var config: [String: Any] {
         ["enableInAppNotification": enableInAppNotificaton,
          "fullPrivacy": enableFullPrivacy,
-         "tags": tags.components(separatedBy: ",").filter { !$0.isBlank }]
+         "tags": tags.components(separatedBy: ",").filter { !$0.isBlank },
+         "customIssueFields": cifs]
+    }
+
+    private var cifs: [String: Any] {
+        ["joining_date": ["type": "dt", "value": "1505927361535"],
+         "stock_level": ["type": "n", "value": "1505"],
+         "employee_name": ["type": "sl", "value": "Bugs helpshift"],
+         "employee_address": ["type": "ml", "value": "303,Joy plaza,Park street,Viman nagar.Pune -432123"],
+         "is_pro": ["type": "b", "value": "true"],
+         "salary_currency": ["type": "dd", "value": "Dollars"]]
     }
 
     private var disableLanguageTextField: Bool {

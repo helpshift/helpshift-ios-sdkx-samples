@@ -25,10 +25,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions options: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         if !AppData.domain.isEmpty && !AppData.platformId.isEmpty {
-            let config = ["enableLogging": true]
             Helpshift.install(withPlatformId: AppData.platformId,
                               domain: AppData.domain,
-                              config: config)
+                              config: installConfig())
+            Helpshift.sharedInstance().delegate = self
+            Helpshift.sharedInstance().proactiveAPIConfigCollectorDelegate = self
             AppData.applyToSdk()
         }
         registerForPush()
@@ -56,6 +57,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Failed to register for remote notifications! Error : \(error.localizedDescription)")
+    }
+
+    private func installConfig() -> [String: Any] {
+        let config = ["enableLogging": true]
+        return config
     }
 }
 
@@ -86,6 +92,39 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         } else if let proactiveLink = userInfo["helpshift_proactive_link"] as? String {
             Helpshift.handleProactiveLink(proactiveLink)
         }
+    }
+}
+
+extension AppDelegate: HelpshiftDelegate {
+    func handleHelpshiftEvent(_ eventName: String, withData data: [AnyHashable : Any]?) {
+        print("Helpshift event received: \(eventName). Event Data: \(data ?? [:])")
+    }
+
+    func authenticationFailedForUser(with reason: HelpshiftAuthenticationFailureReason) {
+        let reasonString = {
+            switch reason {
+            case .authTokenNotProvided: return "Auth token not provided"
+            case .invalidAuthToken: return "Invalid auth token"
+            @unknown default: return "Unknown"
+            }
+        }()
+        print("Helpshift user authentication failed. Reason: \(reasonString)")
+    }
+}
+
+extension AppDelegate: HelpshiftProactiveAPIConfigCollectorDelegate {
+    func getAPIConfig() -> [AnyHashable : Any] {
+        return ["firstUserMessage": "Hi there!",
+                "fullPrivacy": true,
+                "contactUsVisibility": 1,
+                "tags": ["vip", "payment", "blocked", "renewal"],
+                "customMetadata": ["vip": "yes",
+                                   "level": "7",
+                                   "user": "paid",
+                                   "score": "12"],
+                "customIssueFields": ["joining_date1": ["type": "date", "value": "3123123"],
+                                      "stock_level": ["type": "number", "value": "1034",],
+                                      "employee_name": ["type": "singleline", "value":"ratnesh"]]]
     }
 }
 
