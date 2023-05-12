@@ -42,6 +42,7 @@ struct ContentView: View {
                 logViews
                 breadcrumbViews
             }
+
         }.onChange(of: language) { newValue in
             if case .custom = language {
                 // Do nothing

@@ -6,7 +6,7 @@
 import SwiftUI
 import HelpshiftX
 
-typealias AppData = DemoAppData // REPLACE
+typealias AppData = DemoAppData
 
 @main
 struct DemoApp: App {
