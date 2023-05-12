@@ -37,6 +37,7 @@
 		635A74E72A0D0C2D00192FD9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		635A74E82A0D0C2D00192FD9 /* AppDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataProtocol.swift; sourceTree = "<group>"; };
 		635A74EC2A0D0C2D00192FD9 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		635A75032A0E179400192FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 		635A74B32A0D09F300192FD9 /* helpshift-ios-sdkx-example */ = {
 			isa = PBXGroup;
 			children = (
+				635A75032A0E179400192FD9 /* Info.plist */,
 				635A74C62A0D0B6900192FD9 /* Source */,
 				635A74C22A0D0A8900192FD9 /* helpshift-ios-sdkx-example.entitlements */,
 				635A74B82A0D09F400192FD9 /* Assets.xcassets */,
@@ -329,7 +331,7 @@
 				DEVELOPMENT_TEAM = 75WN78RS4G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Helpshift SDK X Demo App";
+				INFOPLIST_FILE = "helpshift-ios-sdkx-example/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -360,7 +362,7 @@
 				DEVELOPMENT_TEAM = 75WN78RS4G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Helpshift SDK X Demo App";
+				INFOPLIST_FILE = "helpshift-ios-sdkx-example/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
