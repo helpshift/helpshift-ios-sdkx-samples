@@ -171,7 +171,7 @@ struct ContentView: View {
         ["enableInAppNotification": enableInAppNotificaton,
          "fullPrivacy": enableFullPrivacy,
          "tags": tags.components(separatedBy: ",").filter { !$0.isBlank },
-         "customIssueFields": cifs]
+         "cifs": cifs]
     }
 
     private var cifs: [String: Any] {

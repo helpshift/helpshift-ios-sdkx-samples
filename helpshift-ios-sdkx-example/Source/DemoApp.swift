@@ -122,9 +122,9 @@ extension AppDelegate: HelpshiftProactiveAPIConfigCollectorDelegate {
                                    "level": "7",
                                    "user": "paid",
                                    "score": "12"],
-                "customIssueFields": ["joining_date1": ["type": "date", "value": "3123123"],
-                                      "stock_level": ["type": "number", "value": "1034",],
-                                      "employee_name": ["type": "singleline", "value":"ratnesh"]]]
+                "cifs": ["joining_date1": ["type": "date", "value": "3123123"],
+                         "stock_level": ["type": "number", "value": "1034",],
+                         "employee_name": ["type": "singleline", "value":"ratnesh"]]]
     }
 }
 
