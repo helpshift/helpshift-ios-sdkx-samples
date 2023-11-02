@@ -7,9 +7,7 @@ import SwiftUI
 import HelpshiftX
 
 struct ContentView: View {
-    @State private var tags = ""
-    @State private var enableFullPrivacy = false
-    @State private var enableInAppNotificaton = false
+
     @State private var pauseInAppNotification = false
     @State private var faqSectionId = ""
     @State private var faqId = ""
@@ -17,9 +15,7 @@ struct ContentView: View {
     @State private var languageStr = AppData.language
     @State private var breadCrumb = ""
     @State private var log = ""
-
-    // Shorter name for accessing root view controller
-    private var vc: UIViewController { UIApplication.shared.rootViewController }
+    @State private var config: [String: Any] = ConfigView.defaultConfig
 
     var body: some View {
         List {
@@ -27,7 +23,9 @@ struct ContentView: View {
                 userViews
             }
             Section("Config Setup") {
-                configViews
+                NavigationLink("Change Config") {
+                    ConfigView(config: $config)
+                }.foregroundColor(.accentColor)
             }
             Section("Conversation") {
                 conversationViews
@@ -63,17 +61,9 @@ struct ContentView: View {
         }
     }
 
-    @ViewBuilder private var configViews: some View {
-        TextField("Comma-separated tags", text: $tags)
-            .textFieldStyle(.roundedBorder)
-            .autocorrectionDisabled()
-        Toggle("Enable Full Privacy", isOn: $enableFullPrivacy)
-        Toggle("Enable In-App Notification", isOn: $enableInAppNotificaton)
-    }
-
     @ViewBuilder private var conversationViews: some View {
         Button("Open Conversation") {
-            Helpshift.showConversation(with: vc, config: config)
+            Helpshift.showConversation(withConfig: config)
         }
         Button("Request unread message count remotely") {
             Helpshift.requestUnreadMessageCount(true)
@@ -86,7 +76,7 @@ struct ContentView: View {
 
     @ViewBuilder private var helpcenterViews: some View {
         Button("Open Help Center") {
-            Helpshift.showFAQs(with: vc, config: config)
+            Helpshift.showFAQs(withConfig: config)
         }
         HStack {
             TextField("FAQ Section ID", text: $faqSectionId)
@@ -94,7 +84,7 @@ struct ContentView: View {
                 .textFieldStyle(.roundedBorder)
             let id = Int(faqSectionId)
             Button("Show FAQ Section") {
-                Helpshift.showFAQSection(faqSectionId, with: vc, config: config)
+                Helpshift.showFAQSection(faqSectionId, withConfig: config)
             }
             .buttonStyle(.borderless)
             .disabled(id == nil)
@@ -105,7 +95,7 @@ struct ContentView: View {
                 .textFieldStyle(.roundedBorder)
             let id = Int(faqId)
             Button("Show Single FAQ") {
-                Helpshift.showSingleFAQ(faqId, with: vc, config: config)
+                Helpshift.showSingleFAQ(faqId, withConfig: config)
             }
             .buttonStyle(.borderless)
             .disabled(id == nil)
@@ -167,21 +157,6 @@ struct ContentView: View {
         }
     }
 
-    private var config: [String: Any] {
-        ["enableInAppNotification": enableInAppNotificaton,
-         "fullPrivacy": enableFullPrivacy,
-         "tags": tags.components(separatedBy: ",").filter { !$0.isBlank },
-         "cifs": cifs]
-    }
-
-    private var cifs: [String: Any] {
-        ["joining_date": ["type": "dt", "value": "1505927361535"],
-         "stock_level": ["type": "n", "value": "1505"],
-         "employee_name": ["type": "sl", "value": "Bugs helpshift"],
-         "employee_address": ["type": "ml", "value": "303,Joy plaza,Park street,Viman nagar.Pune -432123"],
-         "is_pro": ["type": "b", "value": "true"],
-         "salary_currency": ["type": "dd", "value": "Dollars"]]
-    }
 
     private var disableLanguageTextField: Bool {
         if case .custom = language {

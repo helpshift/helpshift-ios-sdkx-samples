@@ -16,30 +16,26 @@ struct DemoApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
-            }
+            }.navigationViewStyle(.stack)
         }
     }
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate {
+    static let closeSession = "closeSessionNotification"
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions options: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        if !AppData.domain.isEmpty && !AppData.platformId.isEmpty {
-            Helpshift.install(withPlatformId: AppData.platformId,
-                              domain: AppData.domain,
-                              config: installConfig())
-            Helpshift.sharedInstance().delegate = self
-            Helpshift.sharedInstance().proactiveAPIConfigCollectorDelegate = self
-            AppData.applyToSdk()
-        }
+        Helpshift.install(withPlatformId: AppData.platformId,
+                          domain: AppData.domain,
+                          config: installConfig())
+        Helpshift.sharedInstance().delegate = self
+        Helpshift.sharedInstance().proactiveAPIConfigCollectorDelegate = self
+        AppData.applyToSdk()
         registerForPush()
         return true
     }
 
     func registerForPush() {
-#if targetEnvironment(simulator)
-        // there is no push on simulator so skip
-#else
         let center = UNUserNotificationCenter.current()
         center.delegate = self
         center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
@@ -48,7 +44,19 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             }
         }
         UIApplication.shared.registerForRemoteNotifications()
-#endif
+    }
+
+    static func closeSessionAPINotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Close Helpshift Support Session API"
+        content.body = "This is a push notification to close Helpshift Session."
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let request = UNNotificationRequest(identifier: AppDelegate.closeSession, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Error sending push notification: \(error.localizedDescription)")
+            }
+        }
     }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
@@ -68,17 +76,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+        let identifier = notification.request.identifier
         let userInfo = notification.request.content.userInfo
         if let origin = userInfo["origin"] as? String, origin == "helpshift" {
             print("userNotificationCenter:willPresentNotification for helpshift origin.")
-            Helpshift.handleNotification(withUserInfoDictionary: userInfo,
-                                         isAppLaunch: false,
-                                         with: UIApplication.shared.rootViewController)
+            Helpshift.handleNotification(withUserInfoDictionary:userInfo, isAppLaunch: false)
             return []
-        } else if let proactiveLink = userInfo["helpshift_proactive_link"] as? String {
-            Helpshift.handleProactiveLink(proactiveLink)
         }
-        return [.banner, .sound]
+        return [.banner, .sound, .list]
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter,
@@ -86,11 +91,18 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         let userInfo = response.notification.request.content.userInfo
         if let origin = userInfo["origin"] as? String, origin == "helpshift" {
             print("userNotificationCenter:didReceiveResponse for helpshift origin.")
-            Helpshift.handleNotification(withUserInfoDictionary: userInfo,
-                                         isAppLaunch: true,
-                                         with: UIApplication.shared.rootViewController)
+            Helpshift.handleNotification(withUserInfoDictionary:userInfo, isAppLaunch: true)
         } else if let proactiveLink = userInfo["helpshift_proactive_link"] as? String {
             Helpshift.handleProactiveLink(proactiveLink)
+        } else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
+            let identifier = response.notification.request.identifier
+            //The received notification's identifier must match the one set
+            if identifier == AppDelegate.closeSession {
+                // Perform closeSession method when the user taps on the notification
+                Helpshift.closeSession()
+            }
+        } else {
+            print("userNotificationCenter:didReceiveResponse for the client notification")
         }
     }
 }
@@ -122,25 +134,8 @@ extension AppDelegate: HelpshiftProactiveAPIConfigCollectorDelegate {
                                    "level": "7",
                                    "user": "paid",
                                    "score": "12"],
-                "cifs": ["joining_date1": ["type": "date", "value": "3123123"],
-                         "stock_level": ["type": "number", "value": "1034",],
-                         "employee_name": ["type": "singleline", "value":"ratnesh"]]]
-    }
-}
-
-extension UIApplication {
-    var currentKeyWindow: UIWindow? {
-        UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .first?.windows
-            .filter { $0.isKeyWindow }
-            .first
-    }
-
-    var rootViewController: UIViewController {
-        guard let vc = currentKeyWindow?.rootViewController else {
-            fatalError("Root view controller is nil. This should never happen.")
-        }
-        return vc
+                "cifs": ["joining_date": ["type": "date", "value": 1685946802123] as [String : Any],
+                         "stock_level": ["type": "number", "value": "1034"],
+                         "employee_name": ["type": "singleline", "value":"Proactive User"]]]
     }
 }

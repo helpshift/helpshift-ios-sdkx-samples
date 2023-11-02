@@ -20,6 +20,7 @@
 		635A74F12A0D0C2E00192FD9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74E72A0D0C2D00192FD9 /* Extensions.swift */; };
 		635A74F22A0D0C2E00192FD9 /* AppDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74E82A0D0C2D00192FD9 /* AppDataProtocol.swift */; };
 		635A74F52A0D0C2E00192FD9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74EC2A0D0C2D00192FD9 /* LoginView.swift */; };
+		F6257ED02AF3A2E50030634B /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6257ECF2AF3A2E50030634B /* ConfigView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		635A74E82A0D0C2D00192FD9 /* AppDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataProtocol.swift; sourceTree = "<group>"; };
 		635A74EC2A0D0C2D00192FD9 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		635A75032A0E179400192FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F6257ECF2AF3A2E50030634B /* ConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				635A74E32A0D0C2D00192FD9 /* MockUserAuthTokenServer.swift */,
 				635A74E22A0D0C2D00192FD9 /* WrapSheetContentModifier.swift */,
 				635A74B42A0D09F300192FD9 /* DemoApp.swift */,
+				F6257ECF2AF3A2E50030634B /* ConfigView.swift */,
 				635A74E82A0D0C2D00192FD9 /* AppDataProtocol.swift */,
 				635A74B62A0D09F300192FD9 /* ContentView.swift */,
 			);
@@ -196,6 +199,7 @@
 				635A74F02A0D0C2E00192FD9 /* Language.swift in Sources */,
 				635A74ED2A0D0C2E00192FD9 /* WrapSheetContentModifier.swift in Sources */,
 				635A74F22A0D0C2E00192FD9 /* AppDataProtocol.swift in Sources */,
+				F6257ED02AF3A2E50030634B /* ConfigView.swift in Sources */,
 				635A74F52A0D0C2E00192FD9 /* LoginView.swift in Sources */,
 				635A74EE2A0D0C2E00192FD9 /* MockUserAuthTokenServer.swift in Sources */,
 				635A74F12A0D0C2E00192FD9 /* Extensions.swift in Sources */,
@@ -410,7 +414,7 @@
 			repositoryURL = "https://github.com/helpshift/HelpshiftX";
 			requirement = {
 				kind = exactVersion;
-				version = 10.2.3;
+				version = 10.3.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

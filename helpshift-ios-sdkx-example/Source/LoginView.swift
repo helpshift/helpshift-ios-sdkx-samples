@@ -69,12 +69,12 @@ struct LoginView: View {
     }
 
     private func login() {
-        var loginData = ["userId": userId,
-                         "userName": userName,
-                         "userEmail": userEmail]
+        var loginData = [HelpshiftUserIdentifier: userId,
+                         HelpshiftUserName: userName,
+                         HelpshiftUserEmail: userEmail]
         if authEnabled {
             let hmac = MockUserAuthTokenServer.generateHMAC(userId, userEmail, secretKey)
-            loginData["userAuthToken"] = hmac
+            loginData[HelpshiftUserAuthToken] = hmac
         }
         Helpshift.loginUser(loginData)
         dismiss()
