@@ -16,9 +16,22 @@ struct ContentView: View {
     @State private var breadCrumb = ""
     @State private var log = ""
     @State private var config: [String: Any] = ConfigView.defaultConfig
+    @State private var showPushTokenSheet = false
 
     var body: some View {
         List {
+            HStack {
+                Text("SDK Version: \(Helpshift.sdkVersion())")
+                if let appLang = Bundle.main.preferredLocalizations.first {
+                    Spacer()
+                    Text("App Lang: \(appLang)")
+                }
+                if let deviceLang = Locale.preferredLanguages.first {
+                    Spacer()
+                    Text("Device Lang: \(deviceLang)")
+                }
+            }.font(.caption2.weight(.light))
+
             Section("User") {
                 userViews
             }
@@ -40,7 +53,9 @@ struct ContentView: View {
                 logViews
                 breadcrumbViews
             }
-
+            Section("Miscellaneous") {
+                miscViews
+            }
         }.onChange(of: language) { newValue in
             if case .custom = language {
                 // Do nothing
@@ -49,7 +64,12 @@ struct ContentView: View {
             }
         }.onChange(of: pauseInAppNotification) { newValue in
             Helpshift.pauseDisplayOf(inAppNotification: newValue)
-        }.navigationTitle("Helpshift Demo")
+        }
+        .sheet(isPresented: $showPushTokenSheet) {
+            pushTokenView.wrapSheetContent()
+        }
+        .navigationTitle("Helpshift Demo")
+        .listStyle(.grouped)
     }
 
     @ViewBuilder private var userViews: some View {
@@ -157,6 +177,26 @@ struct ContentView: View {
         }
     }
 
+    @ViewBuilder private var miscViews: some View {
+        Button("Close Session API Notification") {
+            AppDelegate.closeSessionAPINotification()
+        }
+        Button("Show push token") {
+            showPushTokenSheet = true
+        }
+    }
+
+    @ViewBuilder private var pushTokenView: some View {
+        VStack {
+            let token = AppData.pushToken
+            let shown = token.isBlank ? "ERROR FETCHING PUSH TOKEN" : token
+            Text(shown).padding().fixedSize(horizontal: false, vertical: true)
+            Button("Copy") {
+                UIPasteboard.general.string = token
+                showPushTokenSheet = false
+            }.disabled(token.isBlank)
+        }
+    }
 
     private var disableLanguageTextField: Bool {
         if case .custom = language {

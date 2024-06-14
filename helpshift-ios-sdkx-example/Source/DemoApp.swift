@@ -60,6 +60,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let stringToken = deviceToken.reduce("") { $0 + String(format: "%02x", $1) }
+        AppData.savePushToken(stringToken)
         Helpshift.registerDeviceToken(deviceToken)
     }
 
@@ -76,7 +78,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-        let identifier = notification.request.identifier
         let userInfo = notification.request.content.userInfo
         if let origin = userInfo["origin"] as? String, origin == "helpshift" {
             print("userNotificationCenter:willPresentNotification for helpshift origin.")

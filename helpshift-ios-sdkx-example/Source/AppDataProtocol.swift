@@ -11,15 +11,13 @@ protocol AppDataProtocol {
     static var webchatUrl: String { get }
     static var helpcenterUrl: String { get }
     static var helpcenterSandbox: Bool { get }
-    static var language: String { get }
-    static var webviewSecurityEnabled: Bool { get }
+    static var webviewInspectable: Bool { get }
     static func saveDomain(_ domain: String)
     static func savePlatformId(_ id: String)
     static func saveWebchatUrl(_ url: String)
     static func saveHelpcenterUrl(_ url: String)
     static func saveHelpcenterSandbox(_ sandbox: Bool)
-    static func saveLanguage(_ language: String)
-    static func saveWebviewSecurityEnabled(_ enabled: Bool)
+    static func saveWebviewInspectable(_ inspectable: Bool)
     static func applyToSdk()
 }
 
@@ -44,6 +42,14 @@ extension AppDataProtocol {
     static func saveLanguage(_ language: String) {
         UserDefaults.standard.set(language.trimmed, forKey: Constants.Storage.hsLanguageKey)
     }
+
+    static var pushToken: String {
+        UserDefaults.standard.string(forKey: Constants.Storage.hsPushTokenKey) ?? ""
+    }
+
+    static func savePushToken(_ pushToken: String) {
+        UserDefaults.standard.set(pushToken.trimmed, forKey: Constants.Storage.hsPushTokenKey)
+    }
 }
 
 struct DemoAppData: AppDataProtocol {
@@ -52,12 +58,12 @@ struct DemoAppData: AppDataProtocol {
     static var webchatUrl = ""
     static var helpcenterUrl = ""
     static var helpcenterSandbox = false
-    static var webviewSecurityEnabled = true
+    static var webviewInspectable = true
     static func saveDomain(_ domain: String) {}
     static func savePlatformId(_ id: String) {}
     static func saveWebchatUrl(_ url: String) {}
     static func saveHelpcenterUrl(_ url: String) {}
     static func saveHelpcenterSandbox(_ sandbox: Bool) {}
-    static func saveWebviewSecurityEnabled(_ enabled: Bool) {}
+    static func saveWebviewInspectable(_ inspectable: Bool) {}
     static func applyToSdk() {}
 }

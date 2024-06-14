@@ -171,6 +171,7 @@ struct ConfigView: View {
                 }
             }
         }
+        .listStyle(.grouped)
         .navigationTitle("Helpshift Config")
         .navigationBarTitleDisplayMode(.inline)
     }

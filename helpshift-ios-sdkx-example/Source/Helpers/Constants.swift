@@ -13,6 +13,7 @@ enum Constants {
         static let hsHelpcenterUrlKey = "hs_helpcenter_url"
         static let hsHelpcenterSandboxKey = "hs_helpcenter_sandbox"
         static let hsLanguageKey = "hs_language"
-        static let hsWebviewSecurityEnabledKey = "hs_webview_security_enabled"
+        static let hsPushTokenKey = "hs_push_token"
+        static let hsWebviewInspectableKey = "hs_webview_inspectable"
     }
 }
