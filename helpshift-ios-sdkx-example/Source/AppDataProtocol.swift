@@ -19,6 +19,16 @@ protocol AppDataProtocol {
     static func saveHelpcenterSandbox(_ sandbox: Bool)
     static func saveWebviewInspectable(_ inspectable: Bool)
     static func applyToSdk()
+    static func saveIdentityJWTToken(_ jwtToken: String)
+    static func saveIdentityLoginData(_ data: String)
+    static func saveIdentitesJson(_ json: String)
+    static func saveSecretKey(_ secretKey: String)
+
+    static var secretKey: String { get }
+    static var identitiesJson: String { get }
+    static var identityJwtToken: String { get }
+    static var identityLoggedInData: String { get }
+
 }
 
 extension AppDataProtocol {
@@ -66,4 +76,12 @@ struct DemoAppData: AppDataProtocol {
     static func saveHelpcenterSandbox(_ sandbox: Bool) {}
     static func saveWebviewInspectable(_ inspectable: Bool) {}
     static func applyToSdk() {}
+    static func saveIdentityJWTToken(_ jwtToken: String) {}
+    static func saveIdentityLoginData(_ data: String) {}
+    static func saveIdentitesJson(_ json: String) {}
+    static func saveSecretKey(_ secretKey: String) {}
+    static var secretKey = ""
+    static var identitiesJson = ""
+    static var identityJwtToken = ""
+    static var identityLoggedInData = ""
 }

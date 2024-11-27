@@ -15,5 +15,9 @@ enum Constants {
         static let hsLanguageKey = "hs_language"
         static let hsPushTokenKey = "hs_push_token"
         static let hsWebviewInspectableKey = "hs_webview_inspectable"
+        static let hsIdentitiesJwtToken = "hs_identities_jwt_token"
+        static let hsIdentitiesLoginData = "hs_identities_login_data"
+        static let hsIdentitiesJson = "hs_identities_json"
+        static let hsSecretKey = "hs_secret_key"
     }
 }

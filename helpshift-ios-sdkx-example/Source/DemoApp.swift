@@ -110,7 +110,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
 extension AppDelegate: HelpshiftDelegate {
     func handleHelpshiftEvent(_ eventName: String, withData data: [AnyHashable : Any]?) {
-        print("Helpshift event received: \(eventName). Event Data: \(data ?? [:])")
+        EventManager.shared.handleEvent(eventName, withData: data)
     }
 
     func authenticationFailedForUser(with reason: HelpshiftAuthenticationFailureReason) {

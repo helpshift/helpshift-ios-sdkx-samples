@@ -15,11 +15,19 @@
 		635A74C82A0D0B9B00192FD9 /* sdk_install_creds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 635A74C72A0D0B9B00192FD9 /* sdk_install_creds.plist */; };
 		635A74ED2A0D0C2E00192FD9 /* WrapSheetContentModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74E22A0D0C2D00192FD9 /* WrapSheetContentModifier.swift */; };
 		635A74EE2A0D0C2E00192FD9 /* MockUserAuthTokenServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74E32A0D0C2D00192FD9 /* MockUserAuthTokenServer.swift */; };
-		635A74EF2A0D0C2E00192FD9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74E52A0D0C2D00192FD9 /* Constants.swift */; };
-		635A74F02A0D0C2E00192FD9 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74E62A0D0C2D00192FD9 /* Language.swift */; };
-		635A74F12A0D0C2E00192FD9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74E72A0D0C2D00192FD9 /* Extensions.swift */; };
 		635A74F22A0D0C2E00192FD9 /* AppDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74E82A0D0C2D00192FD9 /* AppDataProtocol.swift */; };
 		635A74F52A0D0C2E00192FD9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74EC2A0D0C2D00192FD9 /* LoginView.swift */; };
+		F624FE482CF72343001E0EA4 /* UserIdentityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE452CF72342001E0EA4 /* UserIdentityModel.swift */; };
+		F624FE492CF72343001E0EA4 /* HelpshiftEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE462CF72342001E0EA4 /* HelpshiftEventManager.swift */; };
+		F624FE4A2CF72343001E0EA4 /* UserIdentityLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE472CF72342001E0EA4 /* UserIdentityLoginView.swift */; };
+		F624FE4D2CF723C3001E0EA4 /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = F624FE4C2CF723C3001E0EA4 /* SwiftJWT */; };
+		F624FE4F2CF723DF001E0EA4 /* AttributesManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE4E2CF723DF001E0EA4 /* AttributesManagerModel.swift */; };
+		F624FE5F2CF72408001E0EA4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE5A2CF72408001E0EA4 /* Extensions.swift */; };
+		F624FE602CF72408001E0EA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE5B2CF72408001E0EA4 /* Constants.swift */; };
+		F624FE622CF72408001E0EA4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE5D2CF72408001E0EA4 /* Language.swift */; };
+		F624FE632CF72408001E0EA4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE5E2CF72408001E0EA4 /* Util.swift */; };
+		F624FE672CF724FD001E0EA4 /* DebugSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE652CF724FD001E0EA4 /* DebugSection.swift */; };
+		F624FE682CF724FD001E0EA4 /* DebugAppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE662CF724FD001E0EA4 /* DebugAppData.swift */; };
 		F6257ED02AF3A2E50030634B /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6257ECF2AF3A2E50030634B /* ConfigView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,12 +41,19 @@
 		635A74C72A0D0B9B00192FD9 /* sdk_install_creds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sdk_install_creds.plist; sourceTree = "<group>"; };
 		635A74E22A0D0C2D00192FD9 /* WrapSheetContentModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapSheetContentModifier.swift; sourceTree = "<group>"; };
 		635A74E32A0D0C2D00192FD9 /* MockUserAuthTokenServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUserAuthTokenServer.swift; sourceTree = "<group>"; };
-		635A74E52A0D0C2D00192FD9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		635A74E62A0D0C2D00192FD9 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		635A74E72A0D0C2D00192FD9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		635A74E82A0D0C2D00192FD9 /* AppDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataProtocol.swift; sourceTree = "<group>"; };
 		635A74EC2A0D0C2D00192FD9 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		635A75032A0E179400192FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F624FE452CF72342001E0EA4 /* UserIdentityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserIdentityModel.swift; sourceTree = "<group>"; };
+		F624FE462CF72342001E0EA4 /* HelpshiftEventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpshiftEventManager.swift; sourceTree = "<group>"; };
+		F624FE472CF72342001E0EA4 /* UserIdentityLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserIdentityLoginView.swift; sourceTree = "<group>"; };
+		F624FE4E2CF723DF001E0EA4 /* AttributesManagerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributesManagerModel.swift; sourceTree = "<group>"; };
+		F624FE5A2CF72408001E0EA4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F624FE5B2CF72408001E0EA4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F624FE5D2CF72408001E0EA4 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		F624FE5E2CF72408001E0EA4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		F624FE652CF724FD001E0EA4 /* DebugSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugSection.swift; sourceTree = "<group>"; };
+		F624FE662CF724FD001E0EA4 /* DebugAppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugAppData.swift; sourceTree = "<group>"; };
 		F6257ECF2AF3A2E50030634B /* ConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F624FE4D2CF723C3001E0EA4 /* SwiftJWT in Frameworks */,
 				635A74C52A0D0AA800192FD9 /* HelpshiftX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,12 +110,17 @@
 		635A74C62A0D0B6900192FD9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F624FE642CF724EC001E0EA4 /* Debug */,
 				635A74E42A0D0C2D00192FD9 /* Helpers */,
 				635A74EC2A0D0C2D00192FD9 /* LoginView.swift */,
 				635A74E32A0D0C2D00192FD9 /* MockUserAuthTokenServer.swift */,
 				635A74E22A0D0C2D00192FD9 /* WrapSheetContentModifier.swift */,
 				635A74B42A0D09F300192FD9 /* DemoApp.swift */,
 				F6257ECF2AF3A2E50030634B /* ConfigView.swift */,
+				F624FE4E2CF723DF001E0EA4 /* AttributesManagerModel.swift */,
+				F624FE462CF72342001E0EA4 /* HelpshiftEventManager.swift */,
+				F624FE472CF72342001E0EA4 /* UserIdentityLoginView.swift */,
+				F624FE452CF72342001E0EA4 /* UserIdentityModel.swift */,
 				635A74E82A0D0C2D00192FD9 /* AppDataProtocol.swift */,
 				635A74B62A0D09F300192FD9 /* ContentView.swift */,
 			);
@@ -109,11 +130,21 @@
 		635A74E42A0D0C2D00192FD9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				635A74E52A0D0C2D00192FD9 /* Constants.swift */,
-				635A74E62A0D0C2D00192FD9 /* Language.swift */,
-				635A74E72A0D0C2D00192FD9 /* Extensions.swift */,
+				F624FE5B2CF72408001E0EA4 /* Constants.swift */,
+				F624FE5A2CF72408001E0EA4 /* Extensions.swift */,
+				F624FE5D2CF72408001E0EA4 /* Language.swift */,
+				F624FE5E2CF72408001E0EA4 /* Util.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F624FE642CF724EC001E0EA4 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				F624FE662CF724FD001E0EA4 /* DebugAppData.swift */,
+				F624FE652CF724FD001E0EA4 /* DebugSection.swift */,
+			);
+			path = Debug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +165,7 @@
 			name = "helpshift-ios-sdkx-example";
 			packageProductDependencies = (
 				635A74C42A0D0AA800192FD9 /* HelpshiftX */,
+				F624FE4C2CF723C3001E0EA4 /* SwiftJWT */,
 			);
 			productName = "helpshift-ios-sdkx-example";
 			productReference = 635A74B12A0D09F300192FD9 /* helpshift-ios-sdkx-example.app */;
@@ -165,6 +197,7 @@
 			mainGroup = 635A74A82A0D09F300192FD9;
 			packageReferences = (
 				635A74C32A0D0AA800192FD9 /* XCRemoteSwiftPackageReference "HelpshiftX" */,
+				F624FE4B2CF723C3001E0EA4 /* XCRemoteSwiftPackageReference "Swift-JWT" */,
 			);
 			productRefGroup = 635A74B22A0D09F300192FD9 /* Products */;
 			projectDirPath = "";
@@ -193,16 +226,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				635A74EF2A0D0C2E00192FD9 /* Constants.swift in Sources */,
 				635A74B72A0D09F300192FD9 /* ContentView.swift in Sources */,
+				F624FE682CF724FD001E0EA4 /* DebugAppData.swift in Sources */,
+				F624FE672CF724FD001E0EA4 /* DebugSection.swift in Sources */,
 				635A74B52A0D09F300192FD9 /* DemoApp.swift in Sources */,
-				635A74F02A0D0C2E00192FD9 /* Language.swift in Sources */,
 				635A74ED2A0D0C2E00192FD9 /* WrapSheetContentModifier.swift in Sources */,
+				F624FE632CF72408001E0EA4 /* Util.swift in Sources */,
+				F624FE482CF72343001E0EA4 /* UserIdentityModel.swift in Sources */,
 				635A74F22A0D0C2E00192FD9 /* AppDataProtocol.swift in Sources */,
 				F6257ED02AF3A2E50030634B /* ConfigView.swift in Sources */,
+				F624FE622CF72408001E0EA4 /* Language.swift in Sources */,
 				635A74F52A0D0C2E00192FD9 /* LoginView.swift in Sources */,
+				F624FE602CF72408001E0EA4 /* Constants.swift in Sources */,
+				F624FE5F2CF72408001E0EA4 /* Extensions.swift in Sources */,
+				F624FE4A2CF72343001E0EA4 /* UserIdentityLoginView.swift in Sources */,
 				635A74EE2A0D0C2E00192FD9 /* MockUserAuthTokenServer.swift in Sources */,
-				635A74F12A0D0C2E00192FD9 /* Extensions.swift in Sources */,
+				F624FE492CF72343001E0EA4 /* HelpshiftEventManager.swift in Sources */,
+				F624FE4F2CF723DF001E0EA4 /* AttributesManagerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +454,15 @@
 			repositoryURL = "https://github.com/helpshift/HelpshiftX";
 			requirement = {
 				kind = exactVersion;
-				version = 10.3.1;
+				version = 10.4.0;
+			};
+		};
+		F624FE4B2CF723C3001E0EA4 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kitura/Swift-JWT.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -424,6 +472,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 635A74C32A0D0AA800192FD9 /* XCRemoteSwiftPackageReference "HelpshiftX" */;
 			productName = HelpshiftX;
+		};
+		F624FE4C2CF723C3001E0EA4 /* SwiftJWT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F624FE4B2CF723C3001E0EA4 /* XCRemoteSwiftPackageReference "Swift-JWT" */;
+			productName = SwiftJWT;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

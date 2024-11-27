@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var log = ""
     @State private var config: [String: Any] = ConfigView.defaultConfig
     @State private var showPushTokenSheet = false
+    @StateObject private var eventManager = EventManager.shared
 
     var body: some View {
         List {
@@ -56,6 +57,9 @@ struct ContentView: View {
             Section("Miscellaneous") {
                 miscViews
             }
+            Section("Helpshift Events") {
+                eventListView.frame(height: 200)
+            }
         }.onChange(of: language) { newValue in
             if case .custom = language {
                 // Do nothing
@@ -76,8 +80,15 @@ struct ContentView: View {
         NavigationLink("Login") {
             LoginView()
         }.foregroundColor(.accentColor)
+        NavigationLink("Login with Identity") {
+            UserIdentityLoginView()
+        }.foregroundColor(.accentColor)
         Button("Logout") {
             Helpshift.logout()
+            AppData.saveIdentityLoginData("")
+            AppData.saveIdentitesJson("")
+            AppData.saveIdentityJWTToken("")
+            AppData.saveSecretKey("")
         }
     }
 
@@ -195,6 +206,21 @@ struct ContentView: View {
                 UIPasteboard.general.string = token
                 showPushTokenSheet = false
             }.disabled(token.isBlank)
+        }
+    }
+
+    @ViewBuilder private var eventListView: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 8) {
+                ForEach(eventManager.messages) { event in
+                    VStack(alignment: .leading) {
+                        Text(event.message)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .font(.footnote)
+                        Divider()
+                    }
+                }
+            }
         }
     }
 
