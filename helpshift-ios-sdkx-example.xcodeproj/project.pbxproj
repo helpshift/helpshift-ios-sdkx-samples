@@ -454,7 +454,7 @@
 			repositoryURL = "https://github.com/helpshift/HelpshiftX";
 			requirement = {
 				kind = exactVersion;
-				version = 10.4.0;
+				version = 10.4.1;
 			};
 		};
 		F624FE4B2CF723C3001E0EA4 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
