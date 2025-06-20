@@ -5,7 +5,7 @@
 
 version: 2
 updates:
-  - package-ecosystem: "swift" # See documentation for possible values
+  - package-ecosystem: "swift"
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
@@ -13,11 +13,11 @@ updates:
       - "dependencies"
       - "swift"
 
-#github Actions workflow updates
-  - package-ecosystem: "github-actions" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "github-actions"
+    directory: "/" # Location of GitHub workflow files
     schedule:
       interval: "weekly"
     labels:
       - "dependencies"
       - "github-actions"
+
