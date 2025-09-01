@@ -26,8 +26,6 @@
 		F624FE602CF72408001E0EA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE5B2CF72408001E0EA4 /* Constants.swift */; };
 		F624FE622CF72408001E0EA4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE5D2CF72408001E0EA4 /* Language.swift */; };
 		F624FE632CF72408001E0EA4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE5E2CF72408001E0EA4 /* Util.swift */; };
-		F624FE672CF724FD001E0EA4 /* DebugSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE652CF724FD001E0EA4 /* DebugSection.swift */; };
-		F624FE682CF724FD001E0EA4 /* DebugAppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE662CF724FD001E0EA4 /* DebugAppData.swift */; };
 		F6257ED02AF3A2E50030634B /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6257ECF2AF3A2E50030634B /* ConfigView.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,8 +50,6 @@
 		F624FE5B2CF72408001E0EA4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F624FE5D2CF72408001E0EA4 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		F624FE5E2CF72408001E0EA4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		F624FE652CF724FD001E0EA4 /* DebugSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugSection.swift; sourceTree = "<group>"; };
-		F624FE662CF724FD001E0EA4 /* DebugAppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugAppData.swift; sourceTree = "<group>"; };
 		F6257ECF2AF3A2E50030634B /* ConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +106,6 @@
 		635A74C62A0D0B6900192FD9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F624FE642CF724EC001E0EA4 /* Debug */,
 				635A74E42A0D0C2D00192FD9 /* Helpers */,
 				635A74EC2A0D0C2D00192FD9 /* LoginView.swift */,
 				635A74E32A0D0C2D00192FD9 /* MockUserAuthTokenServer.swift */,
@@ -136,15 +131,6 @@
 				F624FE5E2CF72408001E0EA4 /* Util.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		F624FE642CF724EC001E0EA4 /* Debug */ = {
-			isa = PBXGroup;
-			children = (
-				F624FE662CF724FD001E0EA4 /* DebugAppData.swift */,
-				F624FE652CF724FD001E0EA4 /* DebugSection.swift */,
-			);
-			path = Debug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,8 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				635A74B72A0D09F300192FD9 /* ContentView.swift in Sources */,
-				F624FE682CF724FD001E0EA4 /* DebugAppData.swift in Sources */,
-				F624FE672CF724FD001E0EA4 /* DebugSection.swift in Sources */,
 				635A74B52A0D09F300192FD9 /* DemoApp.swift in Sources */,
 				635A74ED2A0D0C2E00192FD9 /* WrapSheetContentModifier.swift in Sources */,
 				F624FE632CF72408001E0EA4 /* Util.swift in Sources */,
