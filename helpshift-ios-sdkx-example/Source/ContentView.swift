@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var log = ""
     @State private var config: [String: Any] = ConfigView.defaultConfig
     @State private var showPushTokenSheet = false
+    @State private var currentUserInfo: [String:String] = AppData.currentUserInfo
     @StateObject private var eventManager = EventManager.shared
 
     var body: some View {
@@ -77,14 +78,26 @@ struct ContentView: View {
     }
 
     @ViewBuilder private var userViews: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text("Sample App User Information").bold()
+            JsonView(
+                title: "User Info:",
+                jsonString: Util.prettyPrintedJSON(from: currentUserInfo)
+            )
+        }
         NavigationLink("Login") {
-            LoginView()
+            LoginView { user in
+                AppData.saveCurrentUserInfo(user)
+                self.currentUserInfo = AppData.currentUserInfo
+            }
         }.foregroundColor(.accentColor)
         NavigationLink("Login with Identity") {
             UserIdentityLoginView()
         }.foregroundColor(.accentColor)
         Button("Logout") {
             Helpshift.logout()
+            currentUserInfo = [:]
+            AppData.saveCurrentUserInfo([:])
             AppData.saveIdentityLoginData("")
             AppData.saveIdentitesJson("")
             AppData.saveIdentityJWTToken("")
@@ -190,7 +203,7 @@ struct ContentView: View {
 
     @ViewBuilder private var miscViews: some View {
         Button("Close Session API Notification") {
-            AppDelegate.closeSessionAPINotification()
+            NotificationHandler.closeSessionAPINotification()
         }
         Button("Show push token") {
             showPushTokenSheet = true
@@ -229,6 +242,24 @@ struct ContentView: View {
             return false
         }
         return true
+    }
+
+}
+
+struct JsonView: View {
+    let title: String?
+    let jsonString: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            if let title = title {
+                Text(title)
+                    .font(.caption)
+            }
+            Text(jsonString)
+                .font(.system(.caption, design: .monospaced))
+                .padding(.vertical, 4)
+        }
     }
 }
 

@@ -35,4 +35,25 @@ class Util {
         return decodedObjects
     }
 
+    static func prettyPrintedJSON<T: Encodable>(from value: T) -> String {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        do {
+            let jsonData = try encoder.encode(value)
+            return String(data: jsonData, encoding: .utf8) ?? "{ \"error\": \"Failed to encode JSON string.\" }"
+        } catch {
+            return "{ \"error\": \"\(error.localizedDescription)\" }"
+        }
+    }
+
+    static func format(_ date: Date?) -> String {
+        guard let date = date else { return "--" }
+        return dateFormatter.string(from: date)
+    }
+
+    static private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy HH:mm:ss.SSS"
+        return formatter
+    }()
 }

@@ -16,6 +16,7 @@ struct LoginView: View {
     @State var authEnabled = false
     @State var clearAnonUser = false
     @Environment(\.dismiss) var dismiss
+    var onLoginSuccess: (([String:String]) -> Void)?
 
     var body: some View {
         ScrollView(.vertical) {
@@ -76,7 +77,11 @@ struct LoginView: View {
             let hmac = MockUserAuthTokenServer.generateHMAC(userId, userEmail, secretKey)
             loginData[HelpshiftUserAuthToken] = hmac
         }
-        Helpshift.loginUser(loginData)
+        let filteredUser = loginData.filter { !$0.value.isEmpty }
+        let loginSuccess = Helpshift.loginUser(filteredUser)
+        if loginSuccess {
+            onLoginSuccess?(filteredUser)
+        }
         dismiss()
     }
 }

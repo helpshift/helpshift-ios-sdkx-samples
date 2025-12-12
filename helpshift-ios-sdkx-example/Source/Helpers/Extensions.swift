@@ -39,3 +39,29 @@ extension Dictionary {
         }
     }
 }
+
+extension URLRequest {
+    /// Returns the request body as a String, handling both httpBody and httpBodyStream
+    func bodyAsString() -> String? {
+        if let bodyData = self.httpBody {
+            return String(data: bodyData, encoding: .utf8)
+        } else if let stream = self.httpBodyStream {
+            stream.open()
+            defer { stream.close() }
+            let bufferSize = 1024
+            var buffer = [UInt8](repeating: 0, count: bufferSize)
+            var data = Data()
+            while stream.hasBytesAvailable {
+                let read = stream.read(&buffer, maxLength: bufferSize)
+                if read > 0 {
+                    data.append(buffer, count: read)
+                } else {
+                    break
+                }
+            }
+            return String(data: data, encoding: .utf8)
+        } else {
+            return nil
+        }
+    }
+}

@@ -439,7 +439,6 @@ struct SectionView<Content: View>: View {
             }
             Divider()
             content()
-            Spacer()
         }
         .padding(.bottom)
     }

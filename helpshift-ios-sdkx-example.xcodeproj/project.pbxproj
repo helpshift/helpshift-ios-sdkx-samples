@@ -27,6 +27,12 @@
 		F624FE622CF72408001E0EA4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE5D2CF72408001E0EA4 /* Language.swift */; };
 		F624FE632CF72408001E0EA4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624FE5E2CF72408001E0EA4 /* Util.swift */; };
 		F6257ED02AF3A2E50030634B /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6257ECF2AF3A2E50030634B /* ConfigView.swift */; };
+		F6DDF1ED2EEBEDFE004A39E6 /* HelpshiftDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DDF1EA2EEBEDFE004A39E6 /* HelpshiftDelegates.swift */; };
+		F6DDF1EE2EEBEDFE004A39E6 /* HelpshiftEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DDF1EB2EEBEDFE004A39E6 /* HelpshiftEventManager.swift */; };
+		F6DDF1EF2EEBEDFE004A39E6 /* HelpshiftProactiveConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DDF1EC2EEBEDFE004A39E6 /* HelpshiftProactiveConfig.swift */; };
+		F6DDF1F12EEBEE23004A39E6 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DDF1F02EEBEE23004A39E6 /* NotificationHandler.swift */; };
+		F6DDF1F32EEBEE30004A39E6 /* DeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DDF1F22EEBEE30004A39E6 /* DeepLinkHandler.swift */; };
+		F6DDF1F52EEBEE43004A39E6 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DDF1F42EEBEE43004A39E6 /* NotificationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +57,12 @@
 		F624FE5D2CF72408001E0EA4 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		F624FE5E2CF72408001E0EA4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		F6257ECF2AF3A2E50030634B /* ConfigView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		F6DDF1EA2EEBEDFE004A39E6 /* HelpshiftDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpshiftDelegates.swift; sourceTree = "<group>"; };
+		F6DDF1EB2EEBEDFE004A39E6 /* HelpshiftEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpshiftEventManager.swift; sourceTree = "<group>"; };
+		F6DDF1EC2EEBEDFE004A39E6 /* HelpshiftProactiveConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpshiftProactiveConfig.swift; sourceTree = "<group>"; };
+		F6DDF1F02EEBEE23004A39E6 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		F6DDF1F22EEBEE30004A39E6 /* DeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkHandler.swift; sourceTree = "<group>"; };
+		F6DDF1F42EEBEE43004A39E6 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +123,13 @@
 				635A74E32A0D0C2D00192FD9 /* MockUserAuthTokenServer.swift */,
 				635A74E22A0D0C2D00192FD9 /* WrapSheetContentModifier.swift */,
 				635A74B42A0D09F300192FD9 /* DemoApp.swift */,
+				F6DDF1EA2EEBEDFE004A39E6 /* HelpshiftDelegates.swift */,
+				F6DDF1F02EEBEE23004A39E6 /* NotificationHandler.swift */,
+				F6DDF1EB2EEBEDFE004A39E6 /* HelpshiftEventManager.swift */,
+				F6DDF1EC2EEBEDFE004A39E6 /* HelpshiftProactiveConfig.swift */,
 				F6257ECF2AF3A2E50030634B /* ConfigView.swift */,
+				F6DDF1F42EEBEE43004A39E6 /* NotificationHandler.swift */,
+				F6DDF1F22EEBEE30004A39E6 /* DeepLinkHandler.swift */,
 				F624FE4E2CF723DF001E0EA4 /* AttributesManagerModel.swift */,
 				F624FE462CF72342001E0EA4 /* HelpshiftEventManager.swift */,
 				F624FE472CF72342001E0EA4 /* UserIdentityLoginView.swift */,
@@ -217,6 +235,9 @@
 				635A74ED2A0D0C2E00192FD9 /* WrapSheetContentModifier.swift in Sources */,
 				F624FE632CF72408001E0EA4 /* Util.swift in Sources */,
 				F624FE482CF72343001E0EA4 /* UserIdentityModel.swift in Sources */,
+				F6DDF1ED2EEBEDFE004A39E6 /* HelpshiftDelegates.swift in Sources */,
+				F6DDF1EE2EEBEDFE004A39E6 /* HelpshiftEventManager.swift in Sources */,
+				F6DDF1EF2EEBEDFE004A39E6 /* HelpshiftProactiveConfig.swift in Sources */,
 				635A74F22A0D0C2E00192FD9 /* AppDataProtocol.swift in Sources */,
 				F6257ED02AF3A2E50030634B /* ConfigView.swift in Sources */,
 				F624FE622CF72408001E0EA4 /* Language.swift in Sources */,
@@ -225,7 +246,10 @@
 				F624FE5F2CF72408001E0EA4 /* Extensions.swift in Sources */,
 				F624FE4A2CF72343001E0EA4 /* UserIdentityLoginView.swift in Sources */,
 				635A74EE2A0D0C2E00192FD9 /* MockUserAuthTokenServer.swift in Sources */,
+				F6DDF1F52EEBEE43004A39E6 /* NotificationHandler.swift in Sources */,
 				F624FE492CF72343001E0EA4 /* HelpshiftEventManager.swift in Sources */,
+				F6DDF1F12EEBEE23004A39E6 /* NotificationHandler.swift in Sources */,
+				F6DDF1F32EEBEE30004A39E6 /* DeepLinkHandler.swift in Sources */,
 				F624FE4F2CF723DF001E0EA4 /* AttributesManagerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,8 +461,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/helpshift/HelpshiftX";
 			requirement = {
-				kind = exactVersion;
-				version = 10.4.1;
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.0;
 			};
 		};
 		F624FE4B2CF723C3001E0EA4 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {

@@ -20,7 +20,7 @@ struct ConfigView: View {
     @State private var cifValue = ""
     @Binding var config: [String: Any]
 
-    static let defaultConfig: [String: Any] = ["fullPrivacy": true,
+    static let defaultConfig: [String: Any] = ["fullPrivacy": false,
                                                "tags":  "",
                                                "enableContactUs": "ALWAYS",
                                                "enableFullPrivacy": false,

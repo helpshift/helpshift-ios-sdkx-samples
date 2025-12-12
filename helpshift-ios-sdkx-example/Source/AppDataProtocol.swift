@@ -12,6 +12,10 @@ protocol AppDataProtocol {
     static var helpcenterUrl: String { get }
     static var helpcenterSandbox: Bool { get }
     static var webviewInspectable: Bool { get }
+    static var secretKey: String { get }
+    static var identitiesJson: String { get }
+    static var identityJwtToken: String { get }
+    static var identityLoggedInData: String { get }
     static func saveDomain(_ domain: String)
     static func savePlatformId(_ id: String)
     static func saveWebchatUrl(_ url: String)
@@ -23,12 +27,6 @@ protocol AppDataProtocol {
     static func saveIdentityLoginData(_ data: String)
     static func saveIdentitesJson(_ json: String)
     static func saveSecretKey(_ secretKey: String)
-
-    static var secretKey: String { get }
-    static var identitiesJson: String { get }
-    static var identityJwtToken: String { get }
-    static var identityLoggedInData: String { get }
-
 }
 
 extension AppDataProtocol {
@@ -60,6 +58,14 @@ extension AppDataProtocol {
     static func savePushToken(_ pushToken: String) {
         UserDefaults.standard.set(pushToken.trimmed, forKey: Constants.Storage.hsPushTokenKey)
     }
+
+    static var currentUserInfo: [String: String] {
+        UserDefaults.standard.dictionary(forKey: Constants.Storage.hsCurrentUserInfo) as? [String: String] ?? [:]
+    }
+
+    static func saveCurrentUserInfo(_ loginData: [String: String]) {
+        UserDefaults.standard.set(loginData, forKey: Constants.Storage.hsCurrentUserInfo)
+    }
 }
 
 struct DemoAppData: AppDataProtocol {
@@ -69,6 +75,10 @@ struct DemoAppData: AppDataProtocol {
     static var helpcenterUrl = ""
     static var helpcenterSandbox = false
     static var webviewInspectable = true
+    static var secretKey = ""
+    static var identitiesJson = ""
+    static var identityJwtToken = ""
+    static var identityLoggedInData = ""
     static func saveDomain(_ domain: String) {}
     static func savePlatformId(_ id: String) {}
     static func saveWebchatUrl(_ url: String) {}
@@ -80,8 +90,4 @@ struct DemoAppData: AppDataProtocol {
     static func saveIdentityLoginData(_ data: String) {}
     static func saveIdentitesJson(_ json: String) {}
     static func saveSecretKey(_ secretKey: String) {}
-    static var secretKey = ""
-    static var identitiesJson = ""
-    static var identityJwtToken = ""
-    static var identityLoggedInData = ""
 }
