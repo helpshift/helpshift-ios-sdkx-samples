@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BA004852EF1F14200024D00 /* helpshiftSampleNotificationExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5BA0047E2EF1F14200024D00 /* helpshiftSampleNotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		635A74B52A0D09F300192FD9 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74B42A0D09F300192FD9 /* DemoApp.swift */; };
 		635A74B72A0D09F300192FD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A74B62A0D09F300192FD9 /* ContentView.swift */; };
 		635A74B92A0D09F400192FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635A74B82A0D09F400192FD9 /* Assets.xcassets */; };
@@ -35,7 +36,32 @@
 		F6DDF1F52EEBEE43004A39E6 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DDF1F42EEBEE43004A39E6 /* NotificationHandler.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5BA004832EF1F14200024D00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 635A74A92A0D09F300192FD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA0047D2EF1F14200024D00;
+			remoteInfo = helpshiftSampleNotificationExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BA004862EF1F14200024D00 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5BA004852EF1F14200024D00 /* helpshiftSampleNotificationExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5BA0047E2EF1F14200024D00 /* helpshiftSampleNotificationExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = helpshiftSampleNotificationExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		635A74B12A0D09F300192FD9 /* helpshift-ios-sdkx-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "helpshift-ios-sdkx-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		635A74B42A0D09F300192FD9 /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
 		635A74B62A0D09F300192FD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,7 +91,28 @@
 		F6DDF1F42EEBEE43004A39E6 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5BA004892EF1F14200024D00 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5BA0047D2EF1F14200024D00 /* helpshiftSampleNotificationExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5BA0047F2EF1F14200024D00 /* helpshiftSampleNotificationExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5BA004892EF1F14200024D00 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = helpshiftSampleNotificationExtension; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		5BA0047B2EF1F14200024D00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		635A74AE2A0D09F300192FD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				635A74B32A0D09F300192FD9 /* helpshift-ios-sdkx-example */,
+				5BA0047F2EF1F14200024D00 /* helpshiftSampleNotificationExtension */,
 				635A74B22A0D09F300192FD9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				635A74B12A0D09F300192FD9 /* helpshift-ios-sdkx-example.app */,
+				5BA0047E2EF1F14200024D00 /* helpshiftSampleNotificationExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +203,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5BA0047D2EF1F14200024D00 /* helpshiftSampleNotificationExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA0048A2EF1F14200024D00 /* Build configuration list for PBXNativeTarget "helpshiftSampleNotificationExtension" */;
+			buildPhases = (
+				5BA0047A2EF1F14200024D00 /* Sources */,
+				5BA0047B2EF1F14200024D00 /* Frameworks */,
+				5BA0047C2EF1F14200024D00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5BA0047F2EF1F14200024D00 /* helpshiftSampleNotificationExtension */,
+			);
+			name = helpshiftSampleNotificationExtension;
+			packageProductDependencies = (
+			);
+			productName = helpshiftSampleNotificationExtension;
+			productReference = 5BA0047E2EF1F14200024D00 /* helpshiftSampleNotificationExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		635A74B02A0D09F300192FD9 /* helpshift-ios-sdkx-example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 635A74BF2A0D09F400192FD9 /* Build configuration list for PBXNativeTarget "helpshift-ios-sdkx-example" */;
@@ -161,10 +232,12 @@
 				635A74AD2A0D09F300192FD9 /* Sources */,
 				635A74AE2A0D09F300192FD9 /* Frameworks */,
 				635A74AF2A0D09F300192FD9 /* Resources */,
+				5BA004862EF1F14200024D00 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5BA004842EF1F14200024D00 /* PBXTargetDependency */,
 			);
 			name = "helpshift-ios-sdkx-example";
 			packageProductDependencies = (
@@ -182,9 +255,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					5BA0047D2EF1F14200024D00 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					635A74B02A0D09F300192FD9 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -208,11 +284,19 @@
 			projectRoot = "";
 			targets = (
 				635A74B02A0D09F300192FD9 /* helpshift-ios-sdkx-example */,
+				5BA0047D2EF1F14200024D00 /* helpshiftSampleNotificationExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5BA0047C2EF1F14200024D00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		635A74AF2A0D09F300192FD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,6 +310,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5BA0047A2EF1F14200024D00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		635A74AD2A0D09F300192FD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,7 +347,78 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5BA004842EF1F14200024D00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BA0047D2EF1F14200024D00 /* helpshiftSampleNotificationExtension */;
+			targetProxy = 5BA004832EF1F14200024D00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5BA004872EF1F14200024D00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = helpshiftSampleNotificationExtension/helpshiftSampleNotificationExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75WN78RS4G;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = helpshiftSampleNotificationExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = helpshiftSampleNotificationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.helpshift.demo.helpshiftSampleNotificationExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BA004882EF1F14200024D00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = helpshiftSampleNotificationExtension/helpshiftSampleNotificationExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75WN78RS4G;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = helpshiftSampleNotificationExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = helpshiftSampleNotificationExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.helpshift.demo.helpshiftSampleNotificationExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		635A74BD2A0D09F400192FD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -436,6 +598,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5BA0048A2EF1F14200024D00 /* Build configuration list for PBXNativeTarget "helpshiftSampleNotificationExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA004872EF1F14200024D00 /* Debug */,
+				5BA004882EF1F14200024D00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		635A74AC2A0D09F300192FD9 /* Build configuration list for PBXProject "helpshift-ios-sdkx-example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
