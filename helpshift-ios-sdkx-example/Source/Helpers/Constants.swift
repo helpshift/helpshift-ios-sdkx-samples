@@ -19,5 +19,7 @@ enum Constants {
         static let hsIdentitiesLoginData = "hs_identities_login_data"
         static let hsIdentitiesJson = "hs_identities_json"
         static let hsSecretKey = "hs_secret_key"
+        static let hsCurrentUserInfo = "hs_current_user_info"
+        static let hsPushPayloadKey = "hs_push_payload"
     }
 }
