@@ -1,34 +1,36 @@
 //
-//  NotificationService.swift
-//  helpshiftSampleNotificationExtension
+//  FalconNotificationService.swift
+//  FalconNSExtension
 //
-//  Created by joyson on 17/12/25.
+//  Created by Joyson P S on 01/09/25.
+//  Copyright © 2025 Helpshift. All rights reserved.
 //
 
 import UserNotifications
+import HelpshiftX
 
-class NotificationService: UNNotificationServiceExtension {
-
+class FalconNotificationService: UNNotificationServiceExtension {
     var contentHandler: ((UNNotificationContent) -> Void)?
-    var bestAttemptContent: UNMutableNotificationContent?
+    var originalContent: UNNotificationContent?
 
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
         self.contentHandler = contentHandler
-        bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
-        
-        if let bestAttemptContent = bestAttemptContent {
-            // Modify the notification content here...
-            bestAttemptContent.title = "\(bestAttemptContent.title) [modified]"
-            
-            contentHandler(bestAttemptContent)
+        self.originalContent = request.content
+
+        let origin = request.content.userInfo["origin"] as? String
+        if origin == "helpshift" {
+            Helpshift.handleBackgroundNotification(request, withContentHandler: contentHandler)
+        } else {
+            contentHandler(request.content)
         }
     }
-    
+
     override func serviceExtensionTimeWillExpire() {
         // Called just before the extension will be terminated by the system.
-        // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
-        if let contentHandler = contentHandler, let bestAttemptContent =  bestAttemptContent {
-            contentHandler(bestAttemptContent)
+        // Use this as an opportunity to deliver your "best attempt" at modified content,
+        // otherwise the original push payload will be used.
+        if let contentHandler, let originalContent {
+            contentHandler(originalContent)
         }
     }
 

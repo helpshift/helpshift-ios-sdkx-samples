@@ -33,7 +33,6 @@ struct ContentView: View {
                     Text("Device Lang: \(deviceLang)")
                 }
             }.font(.caption2.weight(.light))
-
             Section("User") {
                 userViews
             }
@@ -202,9 +201,6 @@ struct ContentView: View {
     }
 
     @ViewBuilder private var miscViews: some View {
-        Button("Close Session API Notification") {
-            NotificationHandler.closeSessionAPINotification()
-        }
         Button("Show push token") {
             showPushTokenSheet = true
         }

@@ -34,10 +34,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions options: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-
         Helpshift.install(withPlatformId: AppData.platformId,
                           domain: AppData.domain,
-                          config: ["enableLogging": true])
+                          config: ["enableLogging": true]) // Should be `false` in production
         Helpshift.sharedInstance().delegate = helpshiftDelegates
         Helpshift.sharedInstance().proactiveAPIConfigCollectorDelegate = helpshiftConfig
         AppData.applyToSdk()
